@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Jetour Word Search - Automotive Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-jetour">
+
+    <div class="jetour-game-wrapper">
+        <!-- En-tête officiel Jetour -->
+        <header class="jetour-header">
+            <div class="brand-box">
+                <span class="brand-icon">🚙</span>
+                <div class="brand-titles">
+                    <h1>JETOUR</h1>
+                    <p>Word Search • Travel+</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <button id="themeToggleBtn" class="jetour-icon-btn" title="Toggle Theme">🌙</button>
+            </div>
+        </header>
+
+        <!-- Barre de statut et Niveaux (1 à 20) -->
+        <div class="jetour-status-bar">
+            <span id="levelDisplay" class="pill-badge">Level 1 / 20</span>
+            <span id="scoreDisplay" class="pill-badge score-pill">Words found: 0</span>
+        </div>
+
+        <!-- Zone principale du jeu -->
+        <main class="game-main-card">
+            <div class="level-info">
+                <h2 id="levelThemeTitle">Theme: SUV Lineup</h2>
+                <!-- Consigne claire pour l'utilisateur -->
+                <p id="gameInstruction" class="game-instruction">Instruction: Slide your finger or mouse smoothly from letter to letter in a straight line to find and connect the hidden words.</p>
+            </div>
+
+            <!-- Grille de jeu interactive -->
+            <div id="gridContainer" class="word-grid"></div>
+
+            <!-- Liste des mots à chercher pour le niveau -->
+            <div class="words-to-find-container">
+                <h3>Words to find:</h3>
+                <div id="wordList" class="word-chips"></div>
+            </div>
+        </main>
+
+        <!-- Modale de fin de niveau -->
+        <div id="levelModal" class="modal-backdrop hidden">
+            <div class="modal-box">
+                <div class="modal-emoji">🏁</div>
+                <h2 id="modalTitle">Journey Completed!</h2>
+                <p id="modalDesc">Ready for the next destination?</p>
+                <button id="nextLevelBtn" class="jetour-btn-primary">Next Level</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
